@@ -1,0 +1,182 @@
+body{
+    overflow: hidden;
+    scroll-snap-type: mandatory;
+}
+#Contenido:has(.agAct){
+    height: 700px;
+}
+#Contenido{
+    margin-top: 20px;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    align-content: initial;
+    padding: 0px 20px;
+    filter: drop-shadow(0 0 40px);
+}
+#tabla{
+    box-shadow:rgb(46, 45, 45) 0.2rem 0.2rem;
+}
+/*#Contenido:has(:checked){
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    height: 500px;
+    align-items: start;
+    align-content: initial;
+}*/
+thead tr th{
+    background: cornflowerblue;
+    color: aliceblue;
+    border:solid black 3px;
+}
+td{
+    border: solid 2px black;
+}
+td,th{
+    background: white;
+    padding: 0 10px;
+    width: 500px;
+    height: 20px;
+    overflow: -moz-hidden-unscrollable;
+
+}
+.contBoton{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding:30px 0px;
+}
+.agregar{
+    color: aliceblue;
+    background: rgb(29, 201, 14);
+    padding: 10px 15px;
+    width: calc(max-content+10px);
+    border: 0px;
+    border-radius:10%;
+    font-size: 15px;
+    filter: drop-shadow(0 0 40px);
+}
+div > .agregar:hover{
+    background-color: rgb(2, 73, 5);
+}
+.guardar{
+    color: aliceblue;
+    background: rgb(29, 201, 14);
+    width: max-content;
+    border-radius:20%;
+    font-size: 15px;
+    place-content: center;
+}
+div > .agregar:hover{
+    background-color: rgb(2, 73, 5);
+}
+.cancelar{
+    color: aliceblue;
+    background: rgb(201, 14, 14);
+    width: max-content;
+    border-radius:20%;
+    font-size: 15px;
+}
+div > .cancelar:hover{
+    background-color: rgb(100, 9, 9);
+}
+.agAct{
+    background: white;
+    display: block;
+    border: solid black 1px;
+    border-radius: 2%;
+    position: fixed;
+    width:81%;
+    transform: translateY(-10px);
+    opacity: 0;
+    animation: slideIn 0.5s ease forwards;
+}
+.visble{
+    opacity: 1;
+    transform: translateY(-10px);
+}
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.tituloForm{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    height: 80px;
+    border-bottom:solid black 1px;
+}
+.formulario{
+    background: white;
+    padding: 20px;
+    height: 400px;
+    overflow: scroll;
+    display: grid;
+}
+.opciones{
+    display: flex;
+    justify-content: flex-end;
+    border-top:solid 1px black;
+    padding: 20px;
+    height: 80px;
+}
+.confirmacion{
+    display: grid;
+    background: white;
+    border-radius: 2%;
+    border: solid 2px rgb(102, 99, 99);
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    right: +30%;
+    padding: 10px;
+    align-content: space-evenly;
+    justify-content: center;
+    box-shadow: 0.5rem 0.5rem rgb(43, 43, 43);
+}
+.boton2{
+    display: grid;
+    height: 100px;
+    margin: 0px;
+}
+.boton2 button{
+    width: 100%;
+}
+
+/*.click{
+    position: fixed;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    background-color: pink;
+    opacity: 0;
+}*/
+@media screen and (max-width:760px) {
+    body{
+        overflow-x: scroll;
+    }
+    #Contenido{
+        overflow-x: scroll;
+        display: grid;
+    }
+    .agAct{
+        position: absolute;
+        width: 90%;
+    }
+    .contLateral{
+        padding: 0%;
+        height: 300px;
+    }
+}
+
+    
+
+    
